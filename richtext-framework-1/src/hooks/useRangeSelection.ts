@@ -5,7 +5,7 @@ type RangeSelection = {
   range: Range | null;
 };
 
-const useRangeSelection = (contentRef: RefObject<HTMLDivElement>): RefObject<RangeSelection> => {
+const useRangeSelection = (contentRef: RefObject<HTMLDivElement | null>): RefObject<RangeSelection | null> => {
   const rangeSelectionRef = useRef<RangeSelection>({ selection: null, range: null });
 
   useEffect(() => {
